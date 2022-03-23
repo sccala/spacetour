@@ -558,7 +558,10 @@ body {
   .grid-container {
     text-align: left;
     column-gap: var(--container-gap, 2rem);
-    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
+        1rem,
+        1fr
+      );
   }
   .grid-container--home > *:first-child {
     grid-column: 2;
