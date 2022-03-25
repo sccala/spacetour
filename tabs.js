@@ -38,9 +38,10 @@ function changeTabFocus(e) {
 function changeTabPanel(e) {
   const targetTab = e.target
   const targetPanel = targetTab.getAttribute('aria-controls')
+  const targetImage = targetTab.getAttribute('data-image')
+  
   const tabContainer = targetTab.parentNode
   const mainContainer = tabContainer.parentNode
-  const targetImage = targetImage.getAttribute('data-image')
 
   mainContainer
     .querySelectorAll('[role="tabpanel"]')
