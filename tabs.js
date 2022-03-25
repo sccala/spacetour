@@ -40,10 +40,17 @@ function changeTabPanel(e) {
   const targetPanel = targetTab.getAttribute('aria-controls')
   const tabContainer = targetTab.parentNode
   const mainContainer = tabContainer.parentNode
+  const targetImage = targetImage.getAttribute('data-image')
 
   mainContainer
     .querySelectorAll('[role="tabpanel"]')
     .forEach((panel) => panel.setAttribute('hidden', true))
 
   mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden')
+
+  mainContainer
+    .querySelectorAll('picture')
+    .forEach((picture) => picture.setAttribute('hidden', true))
+
+  mainContainer.querySelector([`#${targetImage}`]).removeAttribute('hidden')
 }
