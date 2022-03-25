@@ -21,8 +21,8 @@
     />
     <link rel="stylesheet" href="./index.css" />
     <title>Space tourism website</title>
-    <script src="navigation.js" defer></script>
-  <script src="tabs.js" defer></script>
+    <script src="./navigation.js" defer></script>
+    <script src="./tabs.js" defer></script>
   </head>
 
   <body class="destination">
@@ -69,7 +69,7 @@
             <a
               class="ff-sans-cond uppercase text-white letter-spacing-2"
               href="technology.html"
-              ><span>03</span>Technology</a
+              ><span aria-hidden="true">03</span>Technology</a
             >
           </li>
         </ul>
@@ -101,28 +101,36 @@
         <img src="assets/destination/image-titan.png" alt="the titan"
       /></picture>
 
-      <div class="tab-list underline-indicators flex">
+      <div class="tab-list underline-indicators flex"  role="tablist">
         <button
-          aria-selected="true" tabindex="0"
+          aria-selected="true"
+          tabindex="0"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="tab"
         >
           Moon
         </button>
         <button
-          aria-selected="false" tabindex="-1"
+          aria-selected="false"
+          tabindex="-1"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="tab"
         >
           Mars
         </button>
         <button
-          aria-selected="false" tabindex="-1"
+          aria-selected="false"
+          tabindex="-1"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="tab"
         >
           Europa
         </button>
         <button
-          aria-selected="false" tabindex="-1"
+          aria-selected="false"
+          tabindex="-1"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="tab"
         >
           Titan
         </button>
