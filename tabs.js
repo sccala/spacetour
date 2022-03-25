@@ -12,7 +12,6 @@ let tabFocus = 0
 function changeTabFocus(e) {
   const keydownLeft = 37
   const keydownRight = 39
-  console.log(e.keyCode)
   if (e.keyCode === keydownLeft || e.keyCode === keydownRight) {
     tabs[tabFocus].setAttribute('tabindex', -1)
 
