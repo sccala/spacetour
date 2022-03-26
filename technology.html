@@ -81,13 +81,13 @@
         <span aria-hidden="true">03</span> SPACE LAUNCH 101
       </h1>
 
-      <div class="small-buttonlist flow" role="">
+      <div class="small-buttonlist flow" role="buttonlist">
         <button
           aria-selected="true"
-          aria-controls="vehecle-indicator"
+          aria-controls="vehecle-button"
           tabindex="0"
-          role="indicator"
-          data-image="commander-image"
+          role="button"
+          data-image="vehicle-image"
           class="small-button"
         >
           1
@@ -95,10 +95,10 @@
         </button>
         <button
           aria-selected="false"
-          aria-controls="port-indicator"
+          aria-controls="port-button"
           tabindex="-1"
-          role="indicator"
-          data-image="specialist-image"
+          role="button"
+          data-image="port-image"
           class="small-button ff-serif"
         >
           2
@@ -106,23 +106,24 @@
         </button>
         <button
           aria-selected="false"
-          aria-controls="capusle-indicator"
+          aria-controls="capusle-button"
           tabindex="-1"
-          role="indicator"
-          data-image="pilot-image"
+          role="button"
+          data-image="capsule-image"
           class="small-button"
         >
           3
           <span class="sr-only">space capsule</span>
         </button>
       </div>
+
       <!-- vehicle -->
       <article
-        hidden
+        
         class="tech-details flow"
-        id="pilot-indicator"
+        id="vehicle-button"
         tabindex="0"
-        role="indicatoritem"
+        role="buttonlist"
       >
         <header class="flow flow--space--small">
           <h2 class="numbered-title">The terminology...</h2>
@@ -138,9 +139,10 @@
       </article>
       <!-- spaceport -->
       <article
+      hidden
         class="tech-details flow"
-        role="indicatoritem"
-        id="commander-indicator"
+        role="buttonlist"
+        id="port-button"
         tabindex="0"
       >
         <header class="flow flow--space--small">
@@ -158,7 +160,7 @@
       <article
         hidden
         class="tech-details flow"
-        id="specialist-indicator"
+        id="capsule-button"
         tabindex="0"
         role="indicatoritem"
       >
@@ -176,18 +178,18 @@
       </article>
 
       <!-- vehicle image -->
-      <picture hidden id="vehicle-image">
+      <picture  id="vehicle-image">
         <source
           srcset="assets/technology/image-launch-vehicle-portrait.jpg"
-          media="(min-width: 400px) 80vw, 100vw" />
+          media="(min-width:45em)" />
         <img
           src="assets/technology/image-launch-vehicle-landscape.jpg"
           alt="launch vehicle"
       /></picture>
       <!-- spaceport image -->
-      <picture id="port-image">
-        <source srcset="assets/technology/image-spaceport-portrait.jpg 35em"
-        sizes="(max-width: 35em) 35em" />
+      <picture  hidden id="port-image">
+        <source srcset="assets/technology/image-spaceport-portrait.jpg"
+        media="(min-width:45em)" />
         <img
           src="assets/technology/image-spaceport-landscape.jpg"
           alt="space port"
@@ -196,7 +198,7 @@
       <picture hidden id="capsule-image">
         <source
           srcset="assets/technology/image-space-capsule-portrait.jpg 35em"
-          sizes="(max-width: 35em) 35em" />
+          media="(min-width:45em)" />
         <img
           src="assets/technology/image-space-capsule-landscape.jpg"
           alt="space capsule"

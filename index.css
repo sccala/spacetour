@@ -336,15 +336,7 @@ select {
 .small-button:hover {
   color: hsl(var(--clr-white));
   background-color: hsl(var(--clr-white) / 0.1);
-
 }
-
-.small-buttonlist{
-margin-top: 5rem;
-}
-
-
-
 
 /* primary-header */
 
@@ -821,6 +813,9 @@ body {
   letter-spacing: 2.7px;
   color: hsl(var(--clr-light));
 }
+ .small-buttonlist {
+    justify-content: space-between;
+  }
 
 @media (min-width: 35em) {
   .grid-container--tech {
@@ -832,6 +827,7 @@ body {
       'button'
       'content';
   }
+ 
 }
 
 @media (min-width: 45em) {
@@ -840,14 +836,24 @@ body {
     column-gap: var(--container-gap, 2rem);
   }
 
+  .small-buttonlist {
+    margin-top: 5rem;
+  }
+
   .grid-container--tech {
     justify-items: center;
     align-content: start;
-    grid-template-columns: minmax(1rem, 1fr) 3rem minmax(0, 30rem) 0;
+    grid-template-columns: minmax(1rem, 1fr) 3rem minmax(0, 35rem) minmax(0, 35rem) minmax(1rem, 0);
     grid-template-areas:
-      '. title title .'
-      '. button content image';
+      '. title title title.'
+      '. button content image .';
   }
+
+    /* grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(
+        1rem,
+        1fr
+      );
+    justify-items: start; */
   .grid-container--tech > picture {
     max-width: 90%;
   }
@@ -855,6 +861,6 @@ body {
   .grid-container--tech > picture {
     grid-column: span 2;
     align-self: end;
-    max-width: 90%;
+    max-width: 100%;
   }
 }
