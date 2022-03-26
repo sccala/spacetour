@@ -1,3 +1,11 @@
 node_modules
 .prettierrc.json
 .eslintrc.json
+
+*.sketch
+*.fig
+
+*.xd
+
+.DS_Store
+.prettierignore
