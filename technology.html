@@ -58,17 +58,17 @@
               ><span aria-hidden="true">01</span>Destination</a
             >
           </li>
-          <li class="active">
+          <li>
             <a
               class="ff-sans-cond uppercase text-white letter-spacing-2"
               href="crew.html"
               ><span aria-hidden="true">02</span>Crew</a
             >
           </li>
-          <li>
+          <li class="active">
             <a
               class="ff-sans-cond uppercase text-white letter-spacing-2"
-              href="technology.html"
+              href="#"
               ><span>03</span>Technology</a
             >
           </li>
@@ -81,8 +81,8 @@
         <span aria-hidden="true">03</span> SPACE LAUNCH 101
       </h1>
 
-      <div class="flex" role="indicatorlist">
-        <!-- <a
+      <div class="small-buttonlist" role="">
+        <a
           aria-selected="true"
           aria-controls="vehecle-indicator"
           tabindex="0"
@@ -99,7 +99,7 @@
           tabindex="-1"
           role="indicator"
           data-image="specialist-image"
-          class="small-button ff-serif "
+          class="small-button ff-serif"
         >
           2
           <span class="sr-only">spaceport</span>
@@ -114,7 +114,7 @@
         >
           3
           <span class="sr-only">space capsule</span>
-        </a> -->
+        </a>
       </div>
       <!-- vehicle -->
       <article
@@ -177,18 +177,26 @@
 
       <!-- vehicle image -->
       <picture hidden id="vehicle-image">
+        <source
+          srcset="assets/technology/image-launch-vehicle-portrait.jpg"
+          media="(min-width: 400px) 80vw, 100vw" />
         <img
           src="assets/technology/image-launch-vehicle-landscape.jpg"
           alt="launch vehicle"
       /></picture>
       <!-- spaceport image -->
       <picture id="port-image">
+        <source srcset="assets/technology/image-spaceport-portrait.jpg 35em"
+        sizes="(max-width: 35em) 35em" />
         <img
           src="assets/technology/image-spaceport-landscape.jpg"
           alt="space port"
       /></picture>
       <!-- capsule image -->
       <picture hidden id="capsule-image">
+        <source
+          srcset="assets/technology/image-space-capsule-portrait.jpg 35em"
+          sizes="(max-width: 35em) 35em" />
         <img
           src="assets/technology/image-space-capsule-landscape.jpg"
           alt="space capsule"
