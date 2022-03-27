@@ -12,9 +12,11 @@ let buttonFocus = 0
 function changeButtonFocus(e) {
   const keydownLeft = 37
   const keydownRight = 39
+
   if (e.keyCode === keydownLeft || e.keyCode === keydownRight) {
     buttons[buttonFocus].setAttribute('tabindex', -1)
   }
+  
   if (e.keyCode === keydownLeft) {
     buttonFocus++
     if (buttonFocus >= buttons.length) {

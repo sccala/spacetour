@@ -335,7 +335,7 @@ select {
 
 .small-button > [aria-selected='true'] {
   color: hsl(var(--clr-dark));
-  background-color: hsl(var(--clr-white));
+  background-color: white;
   border: none;
 }
 
@@ -800,6 +800,7 @@ body {
 
 .grid-container--tech {
   --flow-space: 2rem;
+  margin-bottom: 4rem;
   grid-template-areas:
     'title'
     'image'
@@ -837,7 +838,7 @@ body {
 
 @media (min-width: 35em) {
   .grid-container--tech {
-    padding-bottom: 0;
+    
     --flow-space: 2rem;
     grid-template-areas:
       'title'
@@ -853,6 +854,7 @@ body {
 @media (min-width: 45em) {
   .grid-container {
     text-align: left;
+    padding-bottom: 0;
     column-gap: var(--container-gap, 2rem);
   }
 
