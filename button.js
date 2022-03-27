@@ -1,32 +1,30 @@
 // @ts-nocheck
-const buttonList = document.querySelector('[role="buttonlist"]')
-const buttons = buttonList.querySelectorAll('[role="button"]')
+const buttonList = document.querySelector('[role="tablist"]')
+const buttons = document.querySelectorAll('[role="tab"]')
 
-buttonList.addEventListener('keydown', changeTabFocus)
+buttonList.addEventListener('keydown', changeButtonFocus)
 
-buttons.forEach((tab) => {
-  tab.addEventListener('click', changeTabPanel)
+buttons.forEach((button) => {
+  button.addEventListener('click', changeButtonPanel)
 })
 
 let buttonFocus = 0
-function changeTabFocus(e) {
+function changeButtonFocus(e) {
   const keydownLeft = 37
   const keydownRight = 39
   if (e.keyCode === keydownLeft || e.keyCode === keydownRight) {
     buttons[buttonFocus].setAttribute('tabindex', -1)
-
-    if (e.keyCode === keydownRight) {
-      buttonFocus++
-      if (buttonFocus >= buttons.length) {
-        buttonFocus = 0
-      }
-    } else if (e.keyCode === keydownLeft) {
-      buttonFocus--
-      if (buttonFocus < 0) {
-        buttonFocus = buttons.length - 1
-      }
+  }
+  if (e.keyCode === keydownLeft) {
+    buttonFocus++
+    if (buttonFocus >= buttons.length) {
+      buttonFocus = 0
     }
-
+  } else if (e.keyCode === keydownRight) {
+    buttonFocus--
+    if (buttonFocus < 0) {
+      buttonFocus = buttons.length - 1
+    }
     buttons[buttonFocus].setAttribute('tabindex', 0)
     buttons[buttonFocus].focus()
   }
@@ -46,12 +44,11 @@ function changeButtonPanel(e) {
 
   targetButton.setAttribute('aria-selected', true)
 
-  hideContent(mainContainer, '[role="buttonlist"]')
+  hideContent(mainContainer, '[role="tabpanel"]')
   showContent(mainContainer, [`#${targetPanel}`])
   hideContent(mainContainer, 'picture')
   showContent(mainContainer, [`#${targetImage}`])
 }
-
 function hideContent(parent, content) {
   parent
     .querySelectorAll(content)

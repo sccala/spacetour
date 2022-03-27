@@ -81,14 +81,15 @@
         <span aria-hidden="true">03</span> SPACE LAUNCH 101
       </h1>
 
-      <div class="small-buttonlist flow" role="buttonlist">
+      <!-- buttons lists -->
+      <div class="small-buttonlist flow" role="tablist">
         <button
           aria-selected="true"
-          aria-controls="vehecle-button"
+          aria-controls="vehicle-button"
           tabindex="0"
-          role="button"
+          role="tab"
           data-image="vehicle-image"
-          class="small-button"
+          class="small-button ff-serif"
         >
           1
           <span class="sr-only">Launch vehicle</span>
@@ -97,7 +98,7 @@
           aria-selected="false"
           aria-controls="port-button"
           tabindex="-1"
-          role="button"
+          role="tab"
           data-image="port-image"
           class="small-button ff-serif"
         >
@@ -106,11 +107,11 @@
         </button>
         <button
           aria-selected="false"
-          aria-controls="capusle-button"
+          aria-controls="capsule-button"
           tabindex="-1"
-          role="button"
+          role="tab"
           data-image="capsule-image"
-          class="small-button"
+          class="small-button ff-serif"
         >
           3
           <span class="sr-only">space capsule</span>
@@ -119,14 +120,13 @@
 
       <!-- vehicle -->
       <article
-        
         class="tech-details flow"
         id="vehicle-button"
         tabindex="0"
-        role="buttonlist"
+        role="tabpanel"
       >
         <header class="flow flow--space--small">
-          <h2 class="numbered-title">The terminology...</h2>
+          <h2 class="tech-title">The terminology...</h2>
           <p class="fs-700 uppercase ff-serif">Launch vehicle</p>
         </header>
         <p>
@@ -139,9 +139,9 @@
       </article>
       <!-- spaceport -->
       <article
-      hidden
+        hidden
         class="tech-details flow"
-        role="buttonlist"
+        role="tabpanel"
         id="port-button"
         tabindex="0"
       >
@@ -162,7 +162,7 @@
         class="tech-details flow"
         id="capsule-button"
         tabindex="0"
-        role="indicatoritem"
+        role="tabpanel"
       >
         <header class="flow flow--space--small">
           <h2 class="tech-title">The terminology...</h2>
@@ -178,7 +178,7 @@
       </article>
 
       <!-- vehicle image -->
-      <picture  id="vehicle-image">
+      <picture id="vehicle-image">
         <source
           srcset="assets/technology/image-launch-vehicle-portrait.jpg"
           media="(min-width:45em)" />
@@ -187,9 +187,10 @@
           alt="launch vehicle"
       /></picture>
       <!-- spaceport image -->
-      <picture  hidden id="port-image">
-        <source srcset="assets/technology/image-spaceport-portrait.jpg"
-        media="(min-width:45em)" />
+      <picture hidden id="port-image">
+        <source
+          srcset="assets/technology/image-spaceport-portrait.jpg"
+          media="(min-width:45em)" />
         <img
           src="assets/technology/image-spaceport-landscape.jpg"
           alt="space port"
@@ -197,7 +198,7 @@
       <!-- capsule image -->
       <picture hidden id="capsule-image">
         <source
-          srcset="assets/technology/image-space-capsule-portrait.jpg 35em"
+          srcset="assets/technology/image-space-capsule-portrait.jpg"
           media="(min-width:45em)" />
         <img
           src="assets/technology/image-space-capsule-landscape.jpg"

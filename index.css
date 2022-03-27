@@ -11,7 +11,7 @@
   /* font-sizes */
   --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
   --fs-800: 3.5rem;
-  --fs-700: 1.5rem;
+  --fs-700: clamp(1.1rem, 2vw + 1rem, 2rem);
   --fs-600: 1rem;
   --fs-500: 1rem;
   --fs-400: 0.9375rem;
@@ -333,6 +333,12 @@ select {
   border-radius: 50%;
 }
 
+.small-button > [aria-selected='true'] {
+  color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-white));
+  border: none;
+}
+
 .small-button:hover {
   color: hsl(var(--clr-white));
   background-color: hsl(var(--clr-white) / 0.1);
@@ -620,6 +626,10 @@ body {
   align-self: start;
 }
 
+.destination-info > p {
+  color: hsl(var(--clr-light));
+}
+
 .destination-meta {
   flex-direction: column;
   border-top: 1px solid hsl(var(--clr-white) / 0.1);
@@ -703,7 +713,11 @@ body {
 }
 
 .crew-details h2 {
-  color: hsl(var(--clr-white) / 0.5);
+  color: hsl(var(--clr-light) / 0.5);
+}
+
+.crew-details > p {
+  color: hsl(var(--clr-light));
 }
 @media (min-width: 35em) {
   .grid-container--crew {
@@ -813,9 +827,13 @@ body {
   letter-spacing: 2.7px;
   color: hsl(var(--clr-light));
 }
- .small-buttonlist {
-    justify-content: space-between;
-  }
+
+.tech-details > p {
+  color: hsl(var(--clr-light));
+}
+.small-buttonlist {
+  justify-content: space-between;
+}
 
 @media (min-width: 35em) {
   .grid-container--tech {
@@ -827,13 +845,20 @@ body {
       'button'
       'content';
   }
- 
+  .tech-title {
+    font-size: var(--fs-300);
+  }
 }
 
 @media (min-width: 45em) {
   .grid-container {
     text-align: left;
     column-gap: var(--container-gap, 2rem);
+  }
+
+  .tech-title {
+    font-size: var(--fs-400);
+    margin-bottom: 1rem;
   }
 
   .small-buttonlist {
@@ -843,13 +868,16 @@ body {
   .grid-container--tech {
     justify-items: center;
     align-content: start;
-    grid-template-columns: minmax(1rem, 1fr) 3rem minmax(0, 35rem) minmax(0, 35rem) minmax(1rem, 0);
+    grid-template-columns:
+      minmax(1rem, 1fr) 3rem minmax(0, 35rem) minmax(0, 35rem)
+      minmax(1rem, 0);
     grid-template-areas:
       '. title title title.'
       '. button content image .';
+    padding-bottom: max(6rem, 20vh);
   }
 
-    /* grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(
+  /* grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(
         1rem,
         1fr
       );
