@@ -1,0 +1,21 @@
+$color-dark: hsl(230, 35%, 7%);
+$color-light: hsl(231, 77%, 90%);
+$color-white: hsl(0, 0%, 100%);
+$color-yellow: #fcba03;
+
+$font-sizes: (
+  '900': calc(clamp(5rem, 8vw + 1rem, 9.375rem)),
+  '800': 3.5rem,
+  '700': calc(clamp(1.1rem, 2vw + 1rem, 2rem)),
+  '600': 1rem,
+  '500': 1rem,
+  '400': 0.9375rem,
+  '300': 1rem,
+  '200': 0.875rem,
+);
+
+body {
+  background-color: $color-dark;
+  color: $color-light;
+  font-size: map-get($font-sizes: 900 );
+}
