@@ -25,4 +25,4 @@ All UI/UX is provided by [FrontEnd Mentor](https://www.frontendmentor.io/)
 - Keyboard navigation
 
 ## Demo
-Coming soon.
+Please see the demo [site](https://spacetoursite.netlify.app). Deployed on Netlify.
